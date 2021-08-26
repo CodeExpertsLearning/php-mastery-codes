@@ -7,4 +7,4 @@ $idadeUsuario = 31;
 
 
 if($idadeUsuario >= $idadeMinima && $idadeUsuario <= $idadeMaxima)  
-    echo "Você possui a idade esperada!";
+    echo "Você possui a idade esperada!"; 
