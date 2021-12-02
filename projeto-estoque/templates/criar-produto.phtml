@@ -1,0 +1,79 @@
+<?php require TEMPLATES . '/includes/cabecalho.phtml'; ?>
+
+<h1>Criar Produto</h1>
+
+<form 
+    action="<?php echo HOME;?>?pagina=/produto/salvar" 
+    method="post" enctype="multipart/form-data" 
+    >
+
+    <div>
+
+        <label>Nome Produto</label>
+        <input
+            type="text" name="nome" 
+            placeholder="Nome do Produto...">
+
+    </div>  
+    
+    <div>
+
+        <label>Descrição Produto</label>
+        <input
+            type="text" name="descricao" 
+            placeholder="Descrição do Produto...">
+
+    </div>
+
+    <div>
+
+        <label>Sobre o Produto</label>
+        <textarea
+            name="sobre" 
+            placeholder="Sobre o Produto..."></textarea>
+
+    </div>
+
+    <div>
+
+        <label>Valor do Produto</label>
+        <input
+            type="text" name="preco" 
+            placeholder="Valor do Produto...">
+
+    </div>
+
+    <div>
+
+        <label>Quantidade Estoque</label>
+        <input
+            type="number" name="estoque" 
+            placeholder="Quantidade Estoque do Produto...">
+
+    </div>
+
+    <div>
+
+        <label>Status</label>
+        <select name="status">
+            <option value="1">Ativo</option>
+            <option value="0">Inativo</option>
+        </select>
+
+    </div>
+
+    <div>
+
+    <label>Foto(s) Produto</label>
+    
+    <input type="file" name="foto[]" multiple>
+
+    </div>
+    
+    
+    <button>Enviar Produto</button>
+
+    <button>Enviar Produto</button>
+</form>
+
+<?php require TEMPLATES . '/includes/rodape.phtml'; ?>
