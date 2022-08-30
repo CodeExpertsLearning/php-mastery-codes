@@ -3,77 +3,76 @@
 <h1>Criar Produto</h1>
 
 <form 
-    action="<?php echo HOME;?>?pagina=/produto/salvar" 
+    action="<?php echo HOME;?>?pagina=/produtos/salvar" 
     method="post" enctype="multipart/form-data" 
     >
 
-    <div>
+    <div class="form-group mb-3">
 
         <label>Nome Produto</label>
-        <input
+
+        <input class="form-control"
             type="text" name="nome" 
             placeholder="Nome do Produto...">
 
     </div>  
     
-    <div>
+    <div class="form-group mb-3">
 
         <label>Descrição Produto</label>
-        <input
+        <input class="form-control"
             type="text" name="descricao" 
             placeholder="Descrição do Produto...">
 
     </div>
 
-    <div>
+    <div class="form-group mb-3">
 
         <label>Sobre o Produto</label>
-        <textarea
+        <textarea class="form-control"
             name="sobre" 
             placeholder="Sobre o Produto..."></textarea>
 
     </div>
 
-    <div>
+    <div class="form-group mb-3">
 
         <label>Valor do Produto</label>
-        <input
+        <input class="form-control"
             type="text" name="preco" 
             placeholder="Valor do Produto...">
 
     </div>
 
-    <div>
-
-        <label>Quantidade Estoque</label>
-        <input
-            type="number" name="estoque" 
-            placeholder="Quantidade Estoque do Produto...">
-
-    </div>
-
-    <div>
+    <div class="form-group mb-3">
 
         <label>Status</label>
-        <select name="status">
+        <select name="status" class="form-control">
             <option value="1">Ativo</option>
             <option value="0">Inativo</option>
         </select>
 
     </div>
 
-    <div>
+    <div class="form-group mb-3">
 
-    <label>Foto(s) Produto</label>
-    
-    <input type="file" name="foto[]" multiple>
+        <label>Foto(s) Produto</label>
+        
+        <input class="form-control" type="file" name="foto" multiple>
+
+    </div>
+
+    <div class="col-4 form-group mt-5 mb-3">
+
+    <label>Quantidade Estoque, se existir valor pro estoque adicione aqui.</label>
+    <input class="form-control"
+        type="number" name="estoque" 
+        placeholder="Quantidade Estoque do Produto...">
 
     </div>
     
     
-    <button>Enviar Produto</button>
-
-    <button>Enviar Produto</button>
+    <button class="btn btn-lg btn-success">Enviar Produto</button>
 </form>
 
 <?php require TEMPLATES . '/includes/rodape.phtml'; ?>

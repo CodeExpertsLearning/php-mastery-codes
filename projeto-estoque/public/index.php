@@ -9,46 +9,16 @@ if($pagina == '/') {
     require TEMPLATES . '/lista.phtml';
 }
 
-if($pagina == '/produto') {
+require PASTA_ROTAS . '/produtos.php';
+require PASTA_ROTAS . '/autenticacao.php';
+require PASTA_ROTAS . '/estoque.php';
 
-    $codigoProduto = isset($_GET['codigo']) ? $_GET['codigo'] : '';
+if($pagina == '/usuario-teste') {
+    $usuario = [
+        'nome' => 'Usuario Teste',
+        'email' => 'nandokstro@gmail.com',
+        'senha' => password_hash('12345678', PASSWORD_ARGON2I)
+    ];
 
-    if($codigoProduto) {
-        $produtoDetalhe = '';
-
-        //foreach(PRODUTOS as $produto) {
-
-          //  if($produto['codigo'] == $codigoProduto) {
-            //    $produtoDetalhe = $produto;
-              //  break;    
-            //}
-        //}
-
-        //php.net/array_filter
-        $produtoDetalhe = array_filter(PRODUTOS, function($produto) use($codigoProduto) {
-            return $produto['codigo'] == $codigoProduto;
-        });
-        
-        //php.net/current
-        $produtoDetalhe = current($produtoDetalhe);
-        
-    }
-
-    if(!$codigoProduto || !isset($produtoDetalhe) || !$produtoDetalhe) 
-        die('Produto não existe');
-
-    
-    $titulo = 'Detalhes do Produto';
-    
-    require TEMPLATES . '/produto.phtml';
-}
-
-if($pagina == '/produto/criar') {
-    require TEMPLATES . '/criar-produto.phtml';
-}
-
-if($pagina == '/produto/salvar') {
-    print '<pre>';
-    var_dump($_POST);
-    var_dump($_FILES);
+    var_dump($usuario);
 }

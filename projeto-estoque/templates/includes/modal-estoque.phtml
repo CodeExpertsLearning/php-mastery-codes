@@ -1,0 +1,28 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            
+        <div id="mensagem"></div> 
+
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Gerencie o Estoque</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="" id="controleEstoqueForm">
+                <div class="form-group">
+                    <label>Quantidade</label>
+                    <input type="number" class="form-control" name="quantidade" placeholder="Quantidade de items deste produto">
+                    <input type="hidden" class="form-control" name="produto" id="produto">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="adicionarEstoque">Adicionar</button>
+            <button type="button" class="btn btn-danger" id="retirarEstoque">Retirar</button>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
